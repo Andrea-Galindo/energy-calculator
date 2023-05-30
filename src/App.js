@@ -1,9 +1,10 @@
 import "./App.css";
+import EnergyForm from "./components/EnergyForm";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
+      <EnergyForm />
     </div>
   );
 }
