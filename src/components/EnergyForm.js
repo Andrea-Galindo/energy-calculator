@@ -3,21 +3,26 @@ import Box from "@mui/material/Box";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
+import Button from "@mui/material/Button";
 
-function EnergyForm({ data }) {
-  const [appliance, setAppliance] = useState("select appliance");
+function EnergyForm({ data, onAddRow }) {
+  const [appliance, setAppliance] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [power, setPower] = useState(0);
   const [usage, setUsage] = useState(0);
-  const [cost, setCost] = useState(13);
+  const [price, setPrice] = useState(13);
+  // const [applianceDict, setApplianceDict] = useState({
+  //   name: "",
+  //   energy_usage: 0,
+  //   cost: 0,
+  //   GHG: 0,
+  // });
 
   const handleApplianceChange = (event, value) => {
     setAppliance(value);
     const selectedAppliance = data.find(({ name }) => name === value);
     if (value) {
       setPower(selectedAppliance.power_consumption_watts);
-      console.log(value);
-      console.log(selectedAppliance);
     } else {
       // reset value when deleting appliance
       setPower(0);
@@ -27,13 +32,28 @@ function EnergyForm({ data }) {
 
   const handleUsageChange = (event) => {
     setUsage(event.target.value);
-    console.log(event.target.value);
   };
 
-  const handleCostChange = (event) => {
-    setCost(event.target.value);
-    console.log(event.target.value);
+  const handlePriceChange = (event) => {
+    setPrice(event.target.value);
   };
+
+  const handleApplianceSubmit = () => {
+    // setApplianceDict({
+    //   ...applianceDict,
+    //   name: appliance,
+    //   energy_usage: (power * usage) / 1000,
+    //   cost: (((power * usage) / 1000) * (price / 100)).toFixed(2),
+    //   GHG: (((power * usage) / 1000) * 0.818).toFixed(2),
+    // });
+    onAddRow({
+      name: appliance,
+      energy_usage: (power * usage) / 1000,
+      cost: (((power * usage) / 1000) * (price / 100)).toFixed(2),
+      GHG: (((power * usage) / 1000) * 0.818).toFixed(2),
+    });
+  };
+
   return (
     <>
       <Box sx={{ width: 550, flexWrap: "wrap" }}>
@@ -78,10 +98,10 @@ function EnergyForm({ data }) {
             }}
           />
           <TextField
-            label="Cost"
-            value={cost}
-            onChange={handleCostChange}
-            id="cost"
+            label="Price"
+            value={price}
+            onChange={handlePriceChange}
+            id="price"
             type="number"
             sx={{ mt: 1, width: 300 }}
             InputProps={{
@@ -97,12 +117,15 @@ function EnergyForm({ data }) {
         <div>
           <p>Cost</p>
           <p>
-            $ {(((power * usage) / 1000) * (cost / 100)).toFixed(2)} per month
+            $ {(((power * usage) / 1000) * (price / 100)).toFixed(2)} per month
           </p>
           <p>Energy usage</p>
           <p>{(power * usage) / 1000} kWh per month</p>
           <p>Monthly Green House Emissions</p>
           <p>{(((power * usage) / 1000) * 0.818).toFixed(2)} Lbs</p>
+          <Button variant="outlined" onClick={handleApplianceSubmit}>
+            Add
+          </Button>
         </div>
       </Box>
     </>
