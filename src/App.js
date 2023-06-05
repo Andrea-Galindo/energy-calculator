@@ -21,12 +21,12 @@ function App() {
   }, []);
 
   const handleAddRow = (newAppliance) => {
-    // Find if the array contains an object by comparing the property value
-    if (applianceTable.some((item) => item.name !== newAppliance.name)) {
-      const rows = [...applianceTable];
-      rows.push(newAppliance);
-      setApplianceTable(rows);
-      // console.log(newAppliance);
+    const applianceExists = applianceTable
+      .map((item) => item.name)
+      .includes(newAppliance.name);
+    if (!applianceExists) {
+      setApplianceTable((prevTable) => [...prevTable, newAppliance]);
+      console.log(newAppliance);
     }
   };
 
