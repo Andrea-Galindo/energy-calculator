@@ -11,12 +11,6 @@ function EnergyForm({ data, onAddRow }) {
   const [power, setPower] = useState(0);
   const [usage, setUsage] = useState(0);
   const [price, setPrice] = useState(13);
-  // const [applianceDict, setApplianceDict] = useState({
-  //   name: "",
-  //   energy_usage: 0,
-  //   cost: 0,
-  //   GHG: 0,
-  // });
 
   const handleApplianceChange = (event, value) => {
     setAppliance(value);
@@ -39,13 +33,6 @@ function EnergyForm({ data, onAddRow }) {
   };
 
   const handleApplianceSubmit = () => {
-    // setApplianceDict({
-    //   ...applianceDict,
-    //   name: appliance,
-    //   energy_usage: (power * usage) / 1000,
-    //   cost: (((power * usage) / 1000) * (price / 100)).toFixed(2),
-    //   GHG: (((power * usage) / 1000) * 0.818).toFixed(2),
-    // });
     onAddRow({
       name: appliance,
       energy_usage: (power * usage) / 1000,
@@ -55,7 +42,7 @@ function EnergyForm({ data, onAddRow }) {
   };
 
   return (
-    <>
+    <div sx={{ with: 929, height: 644, border: 3, display: "flex" }}>
       <Box sx={{ width: 550, flexWrap: "wrap" }}>
         <form>
           <Autocomplete
@@ -128,7 +115,7 @@ function EnergyForm({ data, onAddRow }) {
           </Button>
         </div>
       </Box>
-    </>
+    </div>
   );
 }
 
