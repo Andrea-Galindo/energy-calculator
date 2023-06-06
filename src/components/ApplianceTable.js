@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createTheme, rgbToHex, ThemeProvider } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -16,6 +16,23 @@ const theme = createTheme({
 });
 
 function ApplianceTable({ rows, onDeleteRow }) {
+  const handleRowClick = (appliance, event) => {
+    event.preventDefault();
+    if (event.button === 2) {
+      // Right-click (desktop)
+      onDeleteRow(appliance);
+    } else if (event.type === "touchstart") {
+      // Touchstart (mobile)
+      const timer = setTimeout(() => {
+        onDeleteRow(appliance);
+      }, 2000); // 2 seconds
+
+      event.target.addEventListener("touchend", () => {
+        clearTimeout(timer);
+      });
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <TableContainer
@@ -45,6 +62,8 @@ function ApplianceTable({ rows, onDeleteRow }) {
             {rows.map((row) => (
               <TableRow
                 key={row.name}
+                onContextMenu={(e) => handleRowClick(row.name, e)}
+                onTouchStart={(e) => handleRowClick(row.name, e)}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
