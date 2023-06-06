@@ -23,9 +23,17 @@ function Results({ rows }) {
   return (
     <div className="totals">
       <div className="totals__container">
-        <p>Total Consumption: {totalConsumption} kWh/Month</p>
-        <p>Green House Gas Emissions: {greenHouseEmissions} Lbs</p>
-        <p>Total Cost: ${energyCharge}</p>
+        <p>
+          <b style={{ marginRight: "3px" }}>Total Consumption:</b>{" "}
+          {totalConsumption} kWh/Month
+        </p>
+        <p>
+          <b style={{ marginRight: "3px" }}>Green House Gas Emissions: </b>
+          {greenHouseEmissions} Lbs
+        </p>
+        <p>
+          <b style={{ marginRight: "3px" }}>Total Cost:</b> ${energyCharge}
+        </p>
       </div>
     </div>
   );
