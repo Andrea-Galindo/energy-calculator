@@ -23,30 +23,20 @@ function ApplianceTable({ rows, onDeleteRow }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          marginTop: "20px",
         }}
       >
         <Table sx={{ width: 550 }} aria-label="appliances table">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}>
-                Appliance
-              </TableCell>
-              <TableCell
-                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
-                align="center"
-              >
+              <TableCell sx={{ color: "rgb(0, 165,133)" }}>Appliance</TableCell>
+              <TableCell sx={{ color: "rgb(0, 165,133)" }} align="center">
                 kWh/Month
               </TableCell>
-              <TableCell
-                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
-                align="center"
-              >
+              <TableCell sx={{ color: "rgb(0, 165,133)" }} align="center">
                 Cost
               </TableCell>
-              <TableCell
-                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
-                align="center"
-              >
+              <TableCell sx={{ color: "rgb(0, 165,133)" }} align="center">
                 GHG (Lbs)
               </TableCell>
             </TableRow>
