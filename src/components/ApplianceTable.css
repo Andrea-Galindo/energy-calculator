@@ -1,8 +1,3 @@
-MuiTableContainer-root {
-  margin-top: 60px;
-  margin-left: 10px;
-}
-
-.MuiTableCell-root {
-  font-weight: 700;
+.material-icons {
+  font-size: 12px; /* Set the desired size in pixels */
 }
