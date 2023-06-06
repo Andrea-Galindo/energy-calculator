@@ -44,13 +44,13 @@ const DownloadTableButton = ({ tableData, fileName }) => {
   return (
     <ThemeProvider theme={theme}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "550px", marginLeft: "25px" }}>
+        <div style={{ width: "550px", marginLeft: "25px", marginTop: "10px" }}>
           <Button
-            size="extra-small"
+            sx={{ fontSize: "12px" }}
             variant="outlined"
             onClick={downloadTableAsPDF}
           >
-            Download Table as PDF
+            Download
           </Button>
         </div>
       </div>
