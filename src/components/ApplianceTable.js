@@ -1,5 +1,5 @@
 import React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, rgbToHex, ThemeProvider } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -15,7 +15,7 @@ const theme = createTheme({
   },
 });
 
-export default function ApplianceTable({ rows }) {
+function ApplianceTable({ rows, onDeleteRow }) {
   return (
     <ThemeProvider theme={theme}>
       <TableContainer
@@ -28,10 +28,27 @@ export default function ApplianceTable({ rows }) {
         <Table sx={{ width: 550 }} aria-label="appliances table">
           <TableHead>
             <TableRow>
-              <TableCell>Appliance</TableCell>
-              <TableCell align="center">kWh/Month</TableCell>
-              <TableCell align="center">Cost</TableCell>
-              <TableCell align="center">GHG (Lbs)</TableCell>
+              <TableCell sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}>
+                Appliance
+              </TableCell>
+              <TableCell
+                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
+                align="center"
+              >
+                kWh/Month
+              </TableCell>
+              <TableCell
+                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
+                align="center"
+              >
+                Cost
+              </TableCell>
+              <TableCell
+                sx={{ fontWeight: "bold", color: "rgb(0, 165,133)" }}
+                align="center"
+              >
+                GHG (Lbs)
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -54,3 +71,5 @@ export default function ApplianceTable({ rows }) {
     </ThemeProvider>
   );
 }
+
+export default ApplianceTable;
