@@ -1,0 +1,15 @@
+.totals {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.totals__container {
+  width: 550px;
+}
+
+.totals__container p {
+  font-weight: 400px;
+}
