@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import EnergyForm from "./components/EnergyForm";
 import ApplianceTable from "./components/ApplianceTable";
+import Results from "./components/Results";
 
 function App() {
   const [appliances, setAppliances] = useState([]);
@@ -30,12 +31,17 @@ function App() {
     }
   };
 
-  const handleDeleteRow = (appliance) => {};
+  const handleDeleteRow = (appliance) => {
+    setApplianceTable((prevTable) =>
+      prevTable.filter((item) => item.name !== appliance.name)
+    );
+  };
 
   return (
     <div className="App">
       <EnergyForm data={appliances} onAddRow={handleAddRow} />
-      <ApplianceTable rows={applianceTable} />
+      <ApplianceTable rows={applianceTable} onDeleteRow={handleDeleteRow} />
+      <Results rows={applianceTable} />
     </div>
   );
 }
