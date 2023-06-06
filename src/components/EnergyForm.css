@@ -1,0 +1,37 @@
+p,
+h4 {
+  font-family: "Manrope";
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  line-height: inherit;
+}
+
+h4 {
+  font-weight: 700px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Manrope";
+}
+
+form {
+  margin: 25px;
+  font-family: "Manrope";
+}
+
+.results {
+  border-bottom: 1px solid;
+  border-color: #d6e1dc;
+}
+
+.MuiButton-root .MuiButton-outlined {
+  color: rgb(0, 165, 133);
+  border: rgb(0, 165, 133);
+}
