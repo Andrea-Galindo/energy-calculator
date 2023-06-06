@@ -24,7 +24,7 @@ function Results({ rows }) {
     <div className="totals">
       <div className="totals__container">
         <p>Total Consumption: {totalConsumption} kWh/Month</p>
-        <p>Green House Gas Emissions: {greenHouseEmissions}</p>
+        <p>Green House Gas Emissions: {greenHouseEmissions} Lbs</p>
         <p>Total Cost: ${energyCharge}</p>
       </div>
     </div>
