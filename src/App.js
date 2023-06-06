@@ -4,6 +4,7 @@ import axios from "axios";
 import EnergyForm from "./components/EnergyForm";
 import ApplianceTable from "./components/ApplianceTable";
 import Results from "./components/Results";
+import DownloadTableButton from "./components/DownloadTableButton";
 
 function App() {
   const [appliances, setAppliances] = useState([]);
@@ -32,9 +33,11 @@ function App() {
   };
 
   const handleDeleteRow = (appliance) => {
-    setApplianceTable((prevTable) =>
-      prevTable.filter((item) => item.name !== appliance.name)
-    );
+    if (window.confirm("Are you sure you want to delete this row?")) {
+      setApplianceTable((prevTable) =>
+        prevTable.filter((item) => item.name !== appliance)
+      );
+    }
   };
 
   return (
@@ -42,6 +45,10 @@ function App() {
       <EnergyForm data={appliances} onAddRow={handleAddRow} />
       <ApplianceTable rows={applianceTable} onDeleteRow={handleDeleteRow} />
       <Results rows={applianceTable} />
+      <DownloadTableButton
+        tableData={applianceTable}
+        fileName={"Energy_Calculator"}
+      />
     </div>
   );
 }
