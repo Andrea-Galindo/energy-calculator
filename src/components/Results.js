@@ -16,8 +16,8 @@ function Results({ rows }) {
     return sum;
   }
 
-  const totalConsumption = sumValuesByKey(rows, "energy_usage");
-  const energyCharge = sumValuesByKey(rows, "cost");
+  const totalConsumption = sumValuesByKey(rows, "energy_usage").toFixed(2);
+  const energyCharge = sumValuesByKey(rows, "cost").toFixed(2);
   const greenHouseEmissions = sumValuesByKey(rows, "GHG");
 
   return (
