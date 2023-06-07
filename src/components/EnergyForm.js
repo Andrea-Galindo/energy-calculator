@@ -162,9 +162,11 @@ function EnergyForm({ data, onAddRow }) {
               <p>{(((power * usage) / 1000) * 0.818).toFixed(2)} Lbs</p>
             </div>
             <ThemeProvider theme={theme}>
-              <Button variant="outlined" onClick={handleApplianceSubmit}>
-                Add
-              </Button>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <Button variant="outlined" onClick={handleApplianceSubmit}>
+                  Add
+                </Button>
+              </div>
             </ThemeProvider>
           </Box>
         </div>
