@@ -44,6 +44,10 @@ function ApplianceTable({ rows, onDeleteRow }) {
         }}
       >
         <Table sx={{ width: 550 }} aria-label="appliances table">
+          <caption style={{ fontSize: "10px" }}>
+            *To delete a row: Right-click on the appliance you want to delete.
+            If using mobile, tap and hold.
+          </caption>
           <TableHead>
             <TableRow>
               <TableCell sx={{ color: "rgb(0, 165,133)" }}>Appliance</TableCell>
