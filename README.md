@@ -1,9 +1,9 @@
 # Energy Calculator
 
-The Energy Calculator is a MVP that aims to provide users with an easy way to calculate their monthly energy consumption and carbon footprint.
+The Energy Calculator is a MVP that aims to provide users with an easy way to estimate their monthly energy consumption and carbon footprint.
 
 
-https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/c150f0e0-cd51-493d-bdac-bb53c99a237c
+https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb64-4625-b524-4a60dd1a7ced
 
 
 ## Features
@@ -19,8 +19,6 @@ https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/c150f0e0-cd5
 - Material-UI: React framework for creating responsive designs.
 
 ## Dependencies
-
-The Energy Calculator project utilizes the following dependencies:
 
 - Material-UI: A React UI framework for building responsive designs.
 - Axios: A promise-based HTTP client for making API requests.
