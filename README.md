@@ -15,16 +15,16 @@ https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb6
 
 ## Technologies Used
 
-- React: A JavaScript library for building user interfaces.
-- Material-UI: React framework for creating responsive designs.
+- React
+- Material-UI
 
 ## Dependencies
 
-- Material-UI: A React UI framework for building responsive designs.
-- Axios: A promise-based HTTP client for making API requests.
-- Dotenv: A zero-dependency module for loading environment variables.
-- jsPDF: A JavaScript library for generating PDF files.
-- jspdf-autotable: An extension for jsPDF that adds support for creating tables in PDF documents.
+- Material-UI
+- Axios
+- Dotenv
+- jsPDF
+- jspdf-autotable
 
 ## Installation
 
@@ -33,10 +33,10 @@ https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb6
 3. Navigate to the project directory: `cd energy-calculator`
 4. Install the dependencies: `npm install`
 5. Create a `.env` file in the root of the project.
-6. Add your credentials and API keys to the `.env` file
+6. Add your API keys to the `.env` file
 7. Start the development server: `npm start`
 
-Note: If you have your personal API, follow the instructions to set up and use your API. Otherwise, you can use the any Public API as an alternative.
+[View Backend Repo](https://github.com/Andrea-Galindo/energy-consumption-api)
 
 ## Usage
 
