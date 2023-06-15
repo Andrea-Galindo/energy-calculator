@@ -28,7 +28,7 @@ https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb6
 
 ## Installation
 
-1. Fork the repository by clicking on the "Fork" button on the top right corner of this page. This will create a copy of the project in your GitHub account.
+1. Fork the repository
 2. Clone the forked repository to your local machine: `git clone https://github.com/your-username/energy-calculator.git`
 3. Navigate to the project directory: `cd energy-calculator`
 4. Install the dependencies: `npm install`
