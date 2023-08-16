@@ -1,6 +1,6 @@
 # Energy Calculator
 
-The Energy Calculator is a MVP that aims to provide users with an easy way to estimate their monthly energy consumption and carbon footprint.
+Web application that provides users with an easy way to estimate their monthly energy consumption and carbon footprint
 
 
 https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb64-4625-b524-4a60dd1a7ced
