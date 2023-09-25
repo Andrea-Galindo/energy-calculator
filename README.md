@@ -2,9 +2,6 @@
 
 Web application that provides users with an easy way to estimate their monthly energy consumption and carbon footprint
 
-
-https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb64-4625-b524-4a60dd1a7ced
-
 ## Features
 
 - Calculate monthly energy bill based on entered usage data and rates
@@ -15,14 +12,6 @@ https://github.com/Andrea-Galindo/energy-calculator/assets/94991198/337bf918-eb6
 
 - React
 - Material-UI
-
-## Dependencies
-
-- Material-UI
-- Axios
-- Dotenv
-- jsPDF
-- jspdf-autotable
 
 ## Installation
 
